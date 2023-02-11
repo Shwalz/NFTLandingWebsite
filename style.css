@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url('img/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .container{
+    width: 1440px;
+}
+
+/* Блок с навигацией */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__item {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(140.08deg, #9CD2EE 3.42%, #00ACEE 95.98%);
+    border-radius: 50%;
+}
+
+.logo__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin: 0 0 0 17px;
+}
+
+.nav__menu {
+    display: flex;
+    margin: 0 0 0 80px;
+}
+
+.nav__item {
+    margin: 0 0 0 36px;
+}
+
+.nav__item:first-child {
+    margin: 0;
+}
+
+.nav__link {
+    font-size: 20px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+.nav__link:hover {
+    /* color: #f9f9f9; */
+    transition: .3s;
+    opacity: 0.77;
+}
+
+/* Общие стили для наших кнопок */
+.btn {
+    padding: 7px 26px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(132.95deg, #FFC301 9.31%, #FF6533 79.4%);
+    box-shadow: 15px 15px 35px rgba(226, 142, 15, 0.18); 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #F4F4F4;
+}
+
+.nav__btn {
+    margin-left: auto;
+}
+
+.nav__btn:hover {
+    opacity: 0.9;
+    transition: .5s;
+}
+
+/* 2 блок в хедере */
+.header__content  {
+    margin: 90px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header__offer {
+    max-width: 470px;
+}
+
+.header__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 68px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.header__text {
+    font-size: 20px;
+    line-height: 157.9%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin: 40px 0 40px 0;
+}
+
+/* Немного изменяем стили для кнопок во втором блоке хедера */
+.buttons__item {
+    width: 155px;
+    height: 48px;
+}
+
+.buttons__item:hover {
+    opacity: .8;
+    transition: .5s;
+}
+
+/* Изменяем фон и рамку у второй кнопки */
+.buttons__item:last-child {
+    border: 1px solid #FF8E1E;
+    background: none;
+    margin: 0 0 0 20px;
+}
+
+
+/* Стилизуем синий блок в хедере */
+.current-price {
+    width: 255px;
+    height: 190px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(140.08deg, #9CD2EE 3.42%, #00ACEE 95.98%);
+    box-shadow: -46px -61px 36px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 0 0 0 29px;
+}
+
+.current-price__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #F4F4F4;
+    margin: 20px 0 0 0;
+}
+
+.current-price__price {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+/* Стили, примененные к .current-price__subtitle автоматически применяются к вложенным строчным элементам;
+ в данном случае к span, поэтому переопределяем только некоторые стили */
+.current-price__subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #F4F4F4;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 14px;
+}
+
+.current-price__subtitle span {
+    font-weight: normal;
+    font-size: 15px;
+    color: #F5F5F5;
+    margin: 0 0 0 14px;
+}
+
+.current-price__profile {
+    display: flex;
+    align-items: center;
+    margin: 26px 0 0 0;
+    /* align-items: flex-end; */
+}
+
+.current-price__name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #F4F4F4;
+    margin: 0 0 0 17px;
+}
+
+/* Стилизуем секцию .generation */
+.generation {
+    display: flex;
+    justify-content: center;
+    padding: 77px 0 64px 0;
+    background-color:#eeeeee;
+}
+
+.generation .container {
+    max-width: 1300px;
+}
+
+/* Общие стили для заголовков в секциях */
+.title{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #232222;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 163.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #232222;
+    margin: 24px 0 0 0;
+}
+
+.generation__title {
+    padding: 0 400px;
+}
+
+.generation__text {
+    padding: 0 250px;
+}
+
+/* Стилизуем 4 элемента в секции */
+.generation__products {
+    display: flex;
+    justify-content: space-between;
+    margin: 56px 0 0 0;
+}
+
+.products__item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.products__link {
+    position: relative;
+    z-index: -1;
+    top: -30px;
+    width: 100%;
+    background: none;
+    /* Генерируем высоту с помощью padding */
+    padding: 30px 0;
+    /* Выравниваем текст внутри ссылки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Стили для текста в ссылке */
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 141.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #232222;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out; 
+}
+
+.products__item:hover .products__link {
+    background: linear-gradient(132.95deg, #FFC301 9.31%, #FF6533 79.4%);
+    color: #fff;
+}
+
+/* Exclusive NFT.Ring drops */
+
+.drops {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 80px 0;
+    background: #f7f7f7;
+}
+
+.drops .container {
+    max-width: 1300px;
+}
+
+.drops__title {
+    padding: 0 300px;
+}
+
+.drops__text {
+    padding: 0 250px;
+}
+
+.drops__products {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: auto; */
+    justify-content: space-between;
+    margin: 56px 0 0 0;
+}
+
+.drops__item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 0 24px 0;
+}
+
+.drops__current-price {
+    width: 310px;
+    height: 184px;
+    background: #F4F4F4;
+    box-shadow: 12px 18px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 0 0 0 29px;
+}
+
+.drops__price-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #232222;
+    margin: 20px 0 0 0;
+}
+
+.drops__price-price {
+    display: flex;
+    align-items: center;
+    margin: 7px 0 0 0;
+}
+
+.drops__price-subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #FF8E1E;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 14px;
+}
+
+.drops__price-profile {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 29px 0;
+}
+
+.drops__price-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #232222;
+    margin: 0 0 0 17px;
+}
+
+/* Browse be category section */
+.category {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 60px 0;
+    background: #f7f7f7;
+}
+
+.category .container {
+    max-width: 1300px;
+}
+
+.category__title {
+    padding: 0 350px;
+}
+
+.category__text {
+    padding: 0 250px;
+}
+
+.category__products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* grid-template-columns: auto; */
+    justify-content: space-between;
+    margin: 28px 0 0 0;
+}
+
+.category__products img {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 0 28px 0;
+}
+
+/* Cripto section */
+.cripto {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 60px 0;
+    background:#eeeeee;
+}
+
+.cripto .container {
+    width: 1300px;
+    max-width: 1300px;
+}
+
+.cripto__products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cripto__products img {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 40px 0 40px ; */
+}
+
+/* register section */
+.register {
+    display: flex;
+    justify-content: center;
+    background-image: url('img/email__bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 230px 0 100px 0;
+}
+
+.register .container { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.register__content {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.register__text {
+    text-align: left;
+}
+
+.register__form {
+    margin: 50px 0 0 0;
+}
+
+.register__input {
+    font-size: 15px;
+    line-height: 175.4%;
+    letter-spacing: 0.02em;
+    color: #333333;
+    border-radius: 10px;
+    width: 340px;
+    height: 50px;
+    border: none;
+    padding: 0 0 0 20px;
+}
+
+.register__btn {
+    margin: 0 0 0 15px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+    padding: 160px 0 180px 0;
+}
+
+.footer .container {
+    display: flex;
+}
+
+.footer__products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 80px;
+}
+
+.footer__item h3, a {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 163.9%;
+    letter-spacing: 0.02em;
+    color: #232222;
+}
+
+.footer__item a {
+    margin: 20px 0 0 0;
+}
+
+.first-block .logo__title {
+    color: #232222;
+}
+
+.first-block {
+    width: 370px;
+    height: 190px;
+}
+
+.first-block p {
+    margin: 30px 0 0 0;
+    font-size: 20px;
+    line-height: 189.9%;
+    letter-spacing: 0.02em;
+    color: #232222;
+}
